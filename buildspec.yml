@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - mvn clean install
+  post_build:
+    commands:
+      - echo completed
+artifacts:
+  files:
+    - target/TweetApp.jar
